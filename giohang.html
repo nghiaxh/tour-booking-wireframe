@@ -1,0 +1,194 @@
+<!-- B2303831 Dang Hoang Nghia -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Image/logo.png" type="image/x-ico" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="./trangchu.css">
+    <link rel="stylesheet" href="./giohang.css">
+    <title>Yêu thích</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <div class="logo_img">Header logo</div>
+            </div>
+            <nav class="header__nav">
+                <a href="../product/tourdulich.html">Tour du lịch</a>
+                <a href="../cart/giohang.html" id="cartButton">Yêu thích</a>
+                <a href="../about/gioithieu.html">Về chúng tôi</a>
+                <a href="#" class="header__account" id="buttonAcc">Tài khoản</a>
+                <a href="../signin/dangnhap.html" id="buttonSignin">Đăng nhập</a>
+                <div class="header__hidden--account header__hidden--none" id="accountContent">
+                    <h1 id="result1"></h1>
+                    <p id="result2"></p>
+                    <a href="#" class="header__account--signout">Thông tin tài khoản</a>
+                    <a href="#" class="header__account--signout" id="buttonSignout">Đăng xuất</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="page__container">
+
+        <div class="cart__container">
+            <h1 id="cart__title">🛒Giỏ hàng</h1>
+            <div id="cartItem" class="cartItem"></div>
+            <span id="totalPrice" class="cart__total">💰Tổng tiền: </span>
+            <button class="cart__button cart__button--consult" id="checkOutButton">Thanh toán</button>
+            <button id="deleteButton" class="cart__button cart__button--deleteAll">Xóa tất cả</button>
+            <a class="cart__button cart__backbutton" href="../product/tourdulich.html">Quay lại trang tour du lịch</a>
+        </div>
+
+        <section class="tour__list">
+            <h1 class="tour__title">Favorites tour</h1>
+            <div class="tour__grid" id="tour__grid">
+                <div class="tour__item">
+                    <div class="img"></div>
+                    <h2>Chợ Cổ Cần Thơ</h2>
+                    <p class="tour__price">
+                        <span>Giá: 850.000<sup>đ</sup></span>
+                    </p>
+
+                    <ul class="tour__details">
+                        <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                        <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                        <li><strong>🚌 Phương tiện:</strong> Xe </li>
+                    </ul>
+                    <button class="tour__button" data-id="1" data-name="Chợ Cổ Cần Thơ" data-price="850000">Tour
+                        button</button>
+                    <button class="tour__unfavorite--button" data-id="1">Tour button</button>
+                </div>
+                <div class="tour__item">
+                    <div class="img"></div>
+                    <h2>Chợ Nổi Cái Răng</h2>
+                    <p class="tour__price">
+                        <span>Giá: 1.050.000<sup>đ</sup></span>
+                    </p>
+                    <ul class="tour__details">
+                        <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                        <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                        <li><strong>🚌 Phương tiện:</strong> Thuyền </li>
+                    </ul>
+                    <button class="tour__button" data-id="2" data-name="Chợ Nổi Cái Răng" data-price="1050000">Tour
+                        button</button>
+                    <button class="tour__unfavorite--button" data-id="2">Tour button</button>
+                </div>
+                <div class="tour__item">
+                    <div class="img"></div>
+                    <h2>Bến Ninh Kiều</h2>
+                    <p class="tour__price">
+                        <span>Giá: 850.000<sup>đ</sup></span>
+                    </p>
+                    <ul class="tour__details">
+                        <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                        <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                        <li><strong>🚌 Phương tiện:</strong> Du thuyền </li>
+                    </ul>
+                    <button class="tour__button" data-id="3" data-name="Bến Ninh Kiều" data-price="850000">Tour
+                        button</button>
+                    <button class="tour__unfavorite--button" data-id="3">Tour button</button>
+                </div>
+                <div class="tour__item">
+                    <div class="img"></div>
+                    <h2>Khu Du Lịch Mỹ Khánh</h2>
+                    <p class="tour__price">
+                        <span>Giá: 1.150.000<sup>đ</sup></span>
+                    </p>
+
+                    <ul class="tour__details">
+                        <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                        <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                        <li><strong>🚌 Phương tiện:</strong> Xe </li>
+                    </ul>
+                    <button class="tour__button" data-id="4" data-name="Khu Du Lịch Mỹ Khánh" data-price="1150000">Tour
+                        button</button>
+                    <button class="tour__unfavorite--button" data-id="4">Tour button</button>
+                </div>
+                <div class="tour__item">
+                    <div class="img"></div>
+                    <h2>Vườn Cò Bằng Lăng</h2>
+                    <p class="tour__price">
+                        <span>Giá: 1.150.000<sup>đ</sup></span>
+                    </p>
+                    <ul class="tour__details">
+                        <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                        <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                        <li><strong>🚌 Phương tiện:</strong> Xe </li>
+                    </ul>
+                    <button class="tour__button" data-id="5" data-name="Vườn Cò Bằng Lăng" data-price="1150000">Tour
+                        button</button>
+                    <button class="tour__unfavorite--button" data-id="5">Tour button</button>
+                </div>
+
+                <div class="tour__item">
+                    <div class="img"></div>
+                    <h2>Thiền Viện Trúc Lâm Phương Nam</h2>
+                    <p class="tour__price">
+                        <span class="label-price">Giá: 950.000<sup>đ</sup></span>
+                    </p>
+
+                    <ul class="tour__details">
+                        <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                        <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                        <li><strong>🚌 Phương tiện:</strong> Xe</li>
+                    </ul>
+                    <button class="tour__button" data-id="6" data-name="Thiền Viện Trúc Lâm Phương Nam"
+                        data-price="950000">Tour button</button>
+                    <button class="tour__unfavorite--button" data-id="6">Tour button</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__logo">
+                <h1 class="footer__h1">Kết nối với chúng tôi</h1>
+                <div class="footer__social">
+                    <a class="footer__social-link" href="https://www.facebook.com/" role="button"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="footer__social-link" href="https://www.instagram.com" role="button"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="footer__social-link" href="https://www.youtube.com/" role="button"><i
+                            class="fab fa-youtube"></i></a>
+                    <a class="footer__social-link" href="https://www.twitter.com/" role="button"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="footer__social-link" href="../trangchu.html" role="button"><i class="fa fa-home"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__contact">
+                <h1 class="footer__h1">Thông tin liên hệ</h1>
+                <p><i class="fas fa-home "> </i> ABC, Ninh Kiều, Cần Thơ</p>
+                <p><i class="fas fa-envelope "></i> meandry@gmail.com</p>
+                <p><i class="fas fa-phone "></i> 0123 456 789</p>
+            </div>
+
+            <div class="footer__services">
+                <h1 class="footer__h1">Hỗ trợ khách hàng</h1>
+                <a href="" class="footer__services-item">Chính sách bảo mật</a>
+                <a href="" class="footer__services-item">Hướng dẫn đặt tour</a>
+                <a href="" class="footer__services-item">Chính sách Thanh toán và Hủy Tour</a>
+                <a href="" class="footer__services-item">Các câu hỏi thường gặp</a>
+            </div>
+
+            <div class="footer__location">
+                <h1 class="footer__h1">Điểm đến nổi bật</h1>
+                <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Cần Thơ</a>
+                <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Hậu Giang</a>
+                <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Bến Tre</a>
+            </div>
+        </div>
+
+        <div class="footer__copyright">
+            Footer copyright
+        </div>
+    </footer>
+</body>
+
+</html>
