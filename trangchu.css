@@ -60,8 +60,13 @@ main {
 }
 
 .header__logo .logo_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 4.375rem;
     width: auto;
+    border: 2px solid #666;
+    padding: 1rem;
 }
 
 .header__nav {
@@ -70,7 +75,10 @@ main {
     gap: 1.25rem;
     flex-wrap: nowrap; /*coi ki*/
     font-size: 1.3rem;
+    /* font-weight: bold; */
     margin-right: 2rem;
+    padding: 1rem;
+    border: 2px solid #333;
 }
 
 .header__nav a {
@@ -148,17 +156,28 @@ main {
 
 /* Danh cho fooster */
 
+.footer__sub--border {
+    padding: 1rem;
+}
+
+.footer {
+    margin-top: 1rem;
+    border: 3px solid #000;
+}
+
 .footer__top {
-    background-color: #000000;
-    color: #ffffff;
-    height: auto;
+    background-color: #fff;
+    /* color: #ffffff; */
+    /* height: auto; */
     width: 100%;
-    padding: 0.3125rem;
+    /* padding: 0.3125rem; */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     /* box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); */
-    padding: 5rem 0;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    gap: 1rem;
 }
 
 .footer__logo,
@@ -169,16 +188,28 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 2.5rem;
+    /* padding-left: 2.5rem; */
+    border: solid 2px #333;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer__social {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 2px solid #999;
+}
+
+.logo {
+    font-size: 1.25rem;
+    padding: 0.5rem;
 }
 
 .footer__social-link {
-    color: #fff;
+    /* color: #fff; */
     font-size: 2.5rem;
     margin-right: 0.0625rem;
     transition: color 0.3s ease;
@@ -190,27 +221,33 @@ main {
 
 .footer__contact p {
     font-size: 1.25rem;
-    color: #ffffff;
+    /* color: #ffffff; */
     margin: 0;
     padding: 0.5rem 0;
     display: flex;
     align-items: center;
+    /* border: 2px solid #999; */
 }
 
 .footer__h1 {
     font-size: 1.875rem;
     font-weight: bold;
-    margin-bottom: 1rem;
-    padding: 0;
+    /* margin-bottom: 1rem; */
+    /* padding: 1rem; */
+    /* border: solid #666; */
+    /* display: flex; */
 }
 
 .footer__services-item,
 .footer__location-item {
     font-size: 1.25rem;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: black;
     text-decoration: none;
     margin-bottom: 1rem;
     transition: color 0.3s ease;
+    /* border: solid 2px #333; */
+    /* padding: 0.25rem; */
 }
 
 .footer__contact p:hover,
@@ -229,9 +266,10 @@ main {
     width: 100%;
     text-align: center;
     padding: 0.938rem 0;
-    font-size: 0.875rem;
-    color: #f8f9fa !important;
-    background-color: #1a1a1a;
+    font-size: 1.25rem;
+    /* color: #f8f9fa !important; */
+    /* background-color: #1a1a1a; */
+    border: 2px solid #333;
 }
 
 /* Danh cho trang chu */
